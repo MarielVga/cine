@@ -1,0 +1,21 @@
+<h1>Nuevo Documental </h1>  
+
+<%= form_with url: documentaryfilms_create_path, model: @documentaryfilm, method: :post do |form| %>
+  <div>
+    <%= form.label :name, "Ingresa Tu Documental", class: "form-label" %> <br>
+    <%= form.text_field :name %> <br>
+  </div>
+  <div>
+    <%= form.label :synopsis, "Synopis", class: "form-label" %> <br>
+    <%= form.text_area :synopsis %> <br>
+  </div>
+  <div>
+    <%= form.label :director, "El Director", class: "form-label" %> <br>
+    <%= form.text_field :director %> <br>
+  </div>
+  <br>
+  <div>
+    <%= form.submit "Guardar" %>
+  </div>
+  
+<% end %>

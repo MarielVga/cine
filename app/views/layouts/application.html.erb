@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cine</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Raleway:ital@1&display=swap" rel="stylesheet">
+    <%= stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css', crossorigin: 'anonymous' %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <!-- Nav -->
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="btn-group" role="group" aria-label="Basic outlined example">
+        <button type="button" class="btn btn-outline-primary">Aplicacion de Entretenimiento</button>
+        <%= link_to movies_path, class: "btn btn-outline-primary" do %>
+          Películas
+        <% end %>
+        <%= link_to series_path, class: "btn btn-outline-primary" do %>
+          Series
+        <% end %>
+        <%= link_to documentary_films_path, class: "btn btn-outline-primary" do %>
+          Documentales
+        <% end %>
+      </div>
+    </nav> 
+  
+    <div class="container mt-5"><%= yield %></div><br>
+
+      <footer>
+        <br>&copy; <%= Time.current.year %> Your Application. All rights reserved. Mariela Vega
+      </footer>
+  </body>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</html>
+
+

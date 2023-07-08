@@ -1,0 +1,19 @@
+<h1>Nueva Movie</h1>
+
+<%= form_with url: movies_create_path, model: @movie, method: :post do |form| %>
+
+  <%= form.label :name, "Ingresa Tu Pelicula", class: "form-label" %> <br>
+  <%= form.text_field :name %> <br>
+
+  <%= form.label :synopsis, "Synopsis", class: "form-label" %> <br>
+  <%= form.text_area :synopsis %> <br>
+
+  <%= form.label :director, "El Director",class: "form-label" %> <br>
+  <%= form.text_field :director %> <br>
+  <br>
+  <%= form.submit "Crear nueva pelicula" %> <br>
+  
+<% end %>
+
+
+
